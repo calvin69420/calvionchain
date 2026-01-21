@@ -118,3 +118,33 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(6, 182, 212, 0.5);
 }
+
+/* YouTube video background styling - ensures full coverage and centering */
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: none;
+  z-index: 0;
+}
+
+/* Responsive sizing to cover entire viewport while maintaining 16:9 aspect ratio */
+/* For wider screens (landscape) */
+@media (min-aspect-ratio: 16/9) {
+  .video-background {
+    width: 100vw;
+    height: 56.25vw; /* 16:9 = height is 56.25% of width */
+    min-height: 100vh;
+  }
+}
+
+/* For taller screens (portrait) */
+@media (max-aspect-ratio: 16/9) {
+  .video-background {
+    width: 177.77777778vh; /* 16:9 = width is 177.78% of height */
+    height: 100vh;
+    min-width: 100vw;
+  }
+}
