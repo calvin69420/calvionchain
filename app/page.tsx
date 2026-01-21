@@ -5,6 +5,7 @@ import { PriceHero } from "@/components/PriceHero"
 export default function Home() {
   // YouTube video background: https://youtu.be/bNK3iZJtDY8
   const videoId = "bNK3iZJtDY8"
+  
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&mute=1&controls=0&playlist=${videoId}&modestbranding=1&rel=0&playsinline=1&enablejsapi=1&iv_load_policy=3&cc_load_policy=0&fs=0&disablekb=1`
 
   return (
